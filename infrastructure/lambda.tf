@@ -79,6 +79,7 @@ resource "aws_lambda_function" "greeting" {
 
   memory_size = var.lambda_memory_mb
   timeout     = var.lambda_timeout_seconds
+  publish     = true
 
   vpc_config {
     subnet_ids         = aws_subnet.private[*].id
